@@ -38,4 +38,43 @@ export const businesses = [
       rating: 4.8,
       reviewCount: 200,
     },
+    {
+      id: 4,
+      imageSrc:
+        "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+      name: "Sushi Spot",
+      address: "789 Oak St",
+      city: "San Francisco",
+      state: "CA",
+      zipCode: "94103",
+      category: "Sushi",
+      rating: 4.8,
+      reviewCount: 200,
+    },
+    {
+      id: 5,
+      imageSrc:
+        "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+      name: "Sushi Spot",
+      address: "789 Oak St",
+      city: "San Francisco",
+      state: "CA",
+      zipCode: "94103",
+      category: "Sushi",
+      rating: 4.8,
+      reviewCount: 200,
+    },
+    {
+      id: 6,
+      imageSrc:
+        "https://content.codecademy.com/programs/react/ravenous/pizza.jpg",
+      name: "Sushi Spot",
+      address: "789 Oak St",
+      city: "San Francisco",
+      state: "CA",
+      zipCode: "94103",
+      category: "Sushi",
+      rating: 4.8,
+      reviewCount: 200,
+    },
   ];
