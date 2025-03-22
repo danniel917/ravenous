@@ -7,6 +7,9 @@ const sortOptions = {
   "Most Reviewed": "review_count",
 };
 
+const bgImage =
+  "https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
 function SearchBar({ setBusinesses }) {
   const [search, setSearch] = useState("");
   const [location, setLocation] = useState("");
@@ -23,8 +26,13 @@ function SearchBar({ setBusinesses }) {
   };
 
   return (
-    <div className="relative flex justify-center flex-col gap-8 bg-gray-800 px-5 py-48 bg-[url(https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg)] bg-center bg-cover text-white before:absolute before:content-[''] before:bg-black before:opacity-50 before:inset-0 before:z-10">
-      <h1 className="text-white font-bold text-center z-10">Select one option to filter</h1>
+    <div
+      className="relative flex justify-center flex-col gap-8 bg-gray-800 px-5 py-48 bg-center bg-cover text-white before:absolute before:content-[''] before:bg-black before:opacity-50 before:inset-0 before:z-10"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <h1 className="text-white font-bold text-center z-10">
+        Select one option to filter
+      </h1>
       <div className="relative flex flex-wrap justify-center gap-4 z-10">
         {Object.keys(sortOptions).map((option) => (
           <button
