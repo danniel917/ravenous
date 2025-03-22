@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-6xl text-center uppercase mb-2">Ravenous</h1>
+      <h1 className="text-2xl md:text-6xl text-center uppercase md:mb-2">Ravenous</h1>
       <SearchBar setBusinesses={setBusinesses} />
       <BusinessList businesses={businesses} />
     </>
