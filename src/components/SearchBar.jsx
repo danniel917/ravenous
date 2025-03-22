@@ -27,7 +27,7 @@ function SearchBar({ setBusinesses }) {
 
   return (
     <div
-      className="relative flex justify-center flex-col gap-8 bg-gray-800 px-5 py-48 bg-center bg-cover text-white before:absolute before:content-[''] before:bg-black before:opacity-50 before:inset-0 before:z-10"
+      className="relative flex justify-center flex-col gap-8 bg-gray-800 px-5 py-20 md:py-48 bg-center bg-cover text-white before:absolute before:content-[''] before:bg-black before:opacity-50 before:inset-0 before:z-10"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <h1 className="text-white font-bold text-center z-10">
