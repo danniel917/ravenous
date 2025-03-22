@@ -1,15 +1,14 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import BusinessList from "./components/BusinessList";
-import { businesses } from "./helpers/businesses";
-
 
 function App() {
+  const [businesses, setBusinesses] = useState([]);
+
   return (
     <>
       <h1 className="text-6xl text-center uppercase mb-2">Ravenous</h1>
-      <SearchBar />
+      <SearchBar setBusinesses={setBusinesses} />
       <BusinessList businesses={businesses} />
     </>
   );

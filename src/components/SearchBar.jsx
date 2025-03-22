@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { fetchData } from "../utils/yelpApi";
 
 const sortOptions = {
   "Best Match": "best_match",
@@ -6,7 +7,7 @@ const sortOptions = {
   "Most Reviewed": "review_count",
 };
 
-function SearchBar() {
+function SearchBar({ setBusinesses }) {
   const [search, setSearch] = useState("");
   const [location, setLocation] = useState("");
   const [selectOption, setSelectOption] = useState("");
@@ -15,9 +16,10 @@ function SearchBar() {
     setSelectOption(sortOptions[option]);
   };
 
-  const handleButtonClick = (e) => {
+  const handleButtonClick = async (e) => {
     e.preventDefault();
-    console.log(`Searching Yelp with ${search}, ${location}, ${selectOption} `);
+    const data = await fetchData(search, location, selectOption);
+    setBusinesses(data.businesses);
   };
 
   return (
