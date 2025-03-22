@@ -33,7 +33,7 @@ function SearchBar({ setBusinesses }) {
       <h1 className="text-white font-bold text-center z-10">
         Select one option to filter
       </h1>
-      <div className="relative flex flex-wrap justify-center gap-4 z-10">
+      <div className="relative flex flex-col md:flex-row flex-wrap justify-center gap-4 z-10">
         {Object.keys(sortOptions).map((option) => (
           <button
             id={option}
@@ -53,15 +53,20 @@ function SearchBar({ setBusinesses }) {
         ))}
       </div>
       <div className="relative z-10 flex flex-wrap justify-center gap-4">
+        <div className="w-full">
+          <h1 className="text-white font-bold text-center z-10">
+            Complete the fields below to find recommendations
+          </h1>
+        </div>
         <input
-          className="bg-gray-200 text-black placeholder:text-gray-400 px-4 py-2 rounded"
+          className="max-sm:w-full bg-gray-200 text-black placeholder:text-gray-400 px-4 py-2 rounded"
           type="text"
           placeholder="Search: E.g. Pizza, Sushi, Chinese"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
         <input
-          className="bg-gray-200 text-black placeholder:text-gray-400 px-4 py-2 rounded"
+          className="max-sm:w-full bg-gray-200 text-black placeholder:text-gray-400 px-4 py-2 rounded"
           type="text"
           placeholder="Location: E.g. New York, San Francisco"
           value={location}
