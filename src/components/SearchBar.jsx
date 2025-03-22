@@ -23,8 +23,9 @@ function SearchBar({ setBusinesses }) {
   };
 
   return (
-    <div className="relative flex justify-center flex-col gap-8 bg-gray-800 px-16 py-48 bg-[url(https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg)] bg-center bg-cover text-white before:absolute before:content-[''] before:bg-black before:opacity-50 before:inset-0 before:z-10">
-      <div className="relative flex justify-center gap-4 z-10">
+    <div className="relative flex justify-center flex-col gap-8 bg-gray-800 px-5 py-48 bg-[url(https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg)] bg-center bg-cover text-white before:absolute before:content-[''] before:bg-black before:opacity-50 before:inset-0 before:z-10">
+      <h1 className="text-white font-bold text-center z-10">Select one option to filter</h1>
+      <div className="relative flex flex-wrap justify-center gap-4 z-10">
         {Object.keys(sortOptions).map((option) => (
           <button
             id={option}
@@ -43,18 +44,18 @@ function SearchBar({ setBusinesses }) {
           </button>
         ))}
       </div>
-      <div className="relative z-10 flex justify-center gap-4">
+      <div className="relative z-10 flex flex-wrap justify-center gap-4">
         <input
           className="bg-gray-200 text-black placeholder:text-gray-400 px-4 py-2 rounded"
           type="text"
-          placeholder="Search Businesses"
+          placeholder="Search: E.g. Pizza, Sushi, Chinese"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
         <input
           className="bg-gray-200 text-black placeholder:text-gray-400 px-4 py-2 rounded"
           type="text"
-          placeholder="Location"
+          placeholder="Location: E.g. New York, San Francisco"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
         />
@@ -63,7 +64,7 @@ function SearchBar({ setBusinesses }) {
         className="relative z-10 rounded bg-yellow-400 text-black px-4 py-2 inline-block mx-auto cursor-pointer"
         onClick={(e) => handleButtonClick(e)}
       >
-        Search
+        Click to Search
       </button>
     </div>
   );
